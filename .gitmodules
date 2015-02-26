@@ -1,0 +1,4 @@
+[submodule "lib/plat/debug-cli"]
+	path = C:/git/arduino-projects/lintilla-embedded/lib/plat/debug-cli
+	url = git@github.com:ERNICommunity/debug-cli.git
+        branch = master
