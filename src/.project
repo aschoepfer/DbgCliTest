@@ -26,14 +26,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>plat</name>
+			<name>lib/debug_cli</name>
 			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>plat/debug_cli</name>
-			<type>2</type>
-			<location>C:/git/arduino-projects/lintilla-embedded/lib/plat/debug-cli/debug_cli</location>
+			<location>C:/git/arduino-projects/DbgCliTest/lib/debug-cli/debug_cli</location>
 		</link>
 	</linkedResources>
 </projectDescription>
