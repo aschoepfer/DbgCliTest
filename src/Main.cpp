@@ -30,17 +30,17 @@ int main()
   DbgCli_Node* rootNode = new DbgCli_Topic("", "mmi", "MMI node.");
   DbgCli_Node::AssignRootNode(rootNode);
   printf("MMI Node: %s\n", DbgCli_Node::RootNode()->getNodeName());
-  printf("%s - %s - %s\n", DbgCli_Node::RootNode()->getParentPath(), DbgCli_Node::RootNode()->getNodeName(), DbgCli_Node::RootNode()->getHelpText());
+  printf("MMI Helptext: %s\n", DbgCli_Node::RootNode()->getHelpText());
 
   printf("\n*ADD TOPIC*\n");
   DbgCli_Node* screenNode = new DbgCli_Topic("mmi", "screen", "Screen Node.");
-  printf("MMI Screen Node: %s\n", screenNode->getNodeName());
-  printf("%s - %s - %s\n", screenNode->getParentPath(), screenNode->getNodeName(), screenNode->getHelpText());
+  printf("Screen Node: %s\n", screenNode->getNodeName());
+  printf("Screen Helptext: %s\n", screenNode->getHelpText());
 
   printf("\n*ADD COMMAND*\n");
   DbgCli_Node* showCmd = new DbgCli_Command("mmi screen", "show", "Show Node, shows current screen.");
   printf("MMI Screen Show Node: %s\n", showCmd->getNodeName());
-  printf("%s - %s - %s\n", showCmd->getParentPath(), showCmd->getNodeName(), showCmd->getHelpText());
+  printf("Show Helptext: %s\n", showCmd->getHelpText());
 
   printf("\n*ADD OTHER BRANCH*\n");
   new DbgCli_Topic("mmi", "sensorA", "This is Sensor A");
@@ -48,17 +48,17 @@ int main()
   DbgCli_Node* topicY = new DbgCli_Topic("mmi sensorA subX", "topicY", "TopicY in subsystemX of sensor A");
   new DbgCli_Command("mmi sensorA subX", "topicZ", "TopicZ in subsystemX of sensor A");
   printf("TopicY Node: %s\n", topicY->getNodeName());
-  printf("%s - %s - %s\n", topicY->getParentPath(), topicY->getNodeName(), topicY->getHelpText());
+  printf("TopicY Helptext: %s\n", topicY->getHelpText());
   printf("----\n");
 
   printf("\n*GET EXISTING NODE*\n");
   DbgCli_Node* tmpNode = DbgCli_Node::RootNode()->getChildNode("screen");
   printf("MMI Node: %s\n", tmpNode->getNodeName());
-  printf("%s - %s - %s\n", tmpNode->getParentPath(), tmpNode->getNodeName(), tmpNode->getHelpText());
+  printf("MMI Helptext: %s\n", tmpNode->getHelpText());
 
   tmpNode = tmpNode->getChildNode("show");
   printf("MMI Screen Node: %s\n", tmpNode->getNodeName());
-  printf("%s - %s - %s\n", tmpNode->getParentPath(), tmpNode->getNodeName(), tmpNode->getHelpText());
+  printf("Screen Helptext: %s\n", tmpNode->getHelpText());
   printf("----\n");
 
   printf("\n*EXECUTE NODES*");
